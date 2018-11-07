@@ -1,14 +1,17 @@
 $(document).ready(function () {
 
 // создаем массив под базу данных машин
-const cars = [];
-    
+var cars = {};
+
+// Находим активный блок информации
+var activeBlock = $('.active');
+
 // Функция подгрузки машин с базы данных в JSON
 function load() {
     fetch('../cars.json')
     .then(function(response) { return response.json(); })
     .then(data => {
-     cars.push(data);
+        Object.assign(cars, data.cars);
     });
 };
 
@@ -37,8 +40,7 @@ $('.btn-prev').on('click', function(){
     a.removeClass('active');
     return false;
 });
-// Находим активный блок информации
-var activeBlock = $('.active');
+
 
 // Функция валидации инпутов
 function validateInput(elem, patern){
@@ -133,11 +135,11 @@ function checkCarsYear(elem){
 // Функция выбора марки авто и заполнение соответствующих полей следующих селекторов
 $("#cars").change(function () {   
     if($(this).val()==='BMW'){
-         checkCarsModel(cars[0].cars.bmw.models, "#model_car");
+        checkCarsModel(cars.bmw.models, "#model_car");
     }else if($(this).val()==='Mersedes'){
-        checkCarsModel(cars[0].cars.Mersedes.models, "#model_car");
+        checkCarsModel(cars.Mersedes.models, "#model_car");
     }else if($(this).val()==='opel'){
-        checkCarsModel(cars[0].cars.Opel.models, "#model_car");
+        checkCarsModel(cars.Opel.models, "#model_car");
     }
    
 });
@@ -146,31 +148,31 @@ $("#model_car").change(function () {
     var modelOfCar = $(this).val();
     switch (modelOfCar) {
         case('x5'):
-        checkCarsYear(cars[0].cars.bmw.models.x5);
+        checkCarsYear(cars.bmw.models.x5);
         break;
         case('x6'):
-        checkCarsYear(cars[0].cars.bmw.models.x6);
+        checkCarsYear(cars.bmw.models.x6);
         break;
         case('X7'):
-        checkCarsYear(cars[0].cars.bmw.models.X7);
+        checkCarsYear(cars.bmw.models.X7);
         break;
         case('CORSA-OPC'):
-        checkCarsYear(cars[0].cars.Opel.models.CORSA);
+        checkCarsYear(cars.Opel.models.CORSA);
         break;
         case('GRANDLAND'):
-        checkCarsYear(cars[0].cars.Opel.models.GRANDLAND);
+        checkCarsYear(cars.Opel.models.GRANDLAND);
         break;
         case('OMEGA'):
-        checkCarsYear(cars[0].cars.Opel.models.OMEGA);
+        checkCarsYear(cars.Opel.models.OMEGA);
         break;
         case('S1'):
-        checkCarsYear(cars[0].cars.Mersedes.models.S1);
+        checkCarsYear(cars.Mersedes.models.S1);
         break;
         case('S2'):
-        checkCarsYear(cars[0].cars.Mersedes.models.S2);
+        checkCarsYear(cars.Mersedes.models.S2);
         break;
         case('S3'):
-        checkCarsYear(cars[0].cars.Mersedes.models.S3);
+        checkCarsYear(cars.Mersedes.models.S3);
         break;
     }
 });
