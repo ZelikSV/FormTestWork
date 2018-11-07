@@ -98,7 +98,7 @@ $('.mail').on('change blur', function() {
 // Город
 $('#location-search').on('change blur', function() {
     var n = $(this);
-    var testCity = /^[а-я]+(?:[- ][а-я]+)*$/i;
+    var testCity = /.[a-zA-Z]+$/;
     validateInput(n, testCity);
 });
 
@@ -155,7 +155,7 @@ $("#model_car").change(function () {
         checkCarsYear(cars[0].cars.bmw.models.X7);
         break;
         case('CORSA-OPC'):
-        checkCarsYear(cars[0].cars.Opel.models.CORSA-OPC);
+        checkCarsYear(cars[0].cars.Opel.models.CORSA);
         break;
         case('GRANDLAND'):
         checkCarsYear(cars[0].cars.Opel.models.GRANDLAND);
