@@ -7,38 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <title>TestWork</title>
 </head>
 
 <body>
-
-    <form action="#" class="form-send">
+<div class="app">
+     <form action="#" class="form-send">
         <h1>Enter your information</h1>
         <div class="first-part active blocks-info d-flex justify-content-center align-items-center flex-column">
             <div class="form-group">
-                <label for="exampleInputEmail1">First Name</label>
-                <input type="text" class="form-control first_name" 
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control first_name" id="first_name"
                     placeholder="First Name">
-                <span class="error-message">Введите ваше имя</span>
+                <span class="error-message">Enter your first name please</span>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Last Name</label>
-                <input type="text" class="form-control last_name" 
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" class="form-control last_name" 
                     placeholder="Last Name">
-                    <span class="error-message">Введите вашу фамилию</span>
+                    <span class="error-message">Enter your last name please</span>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Age</label>
-                <input type="text" class="form-control age"
+                <label for="age">Age</label>
+                <input type="text" class="form-control age" id="age"
                     placeholder="Enter Age">
-                    <span class="error-message">Введите ваш возраст</span>
+                    <span class="error-message">Enter your age please</span>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Driver License</label>
-                <input type="text" class="form-control driver_license" 
+                <label for="driver_license">Driver License</label>
+                <input type="text" id="driver_license" class="form-control driver_license" 
                     placeholder="Enter Driver License">
-                    <span class="error-message">Введите восемь цифр вашего удостовирения</span>
+                    <span class="error-message">Enter eight letters of your Driver License please</span>
             </div>
             <button class="btn btn-primary btn-next hidden">Next Level</button>
         </div>
@@ -73,19 +75,19 @@
                 <label for="location-search">City</label>
                 <input type="text" class="form-control" 
                     placeholder="Enter City" id="location-search">
-                    <span class="error-message">Введите ваш город</span>
+                    <span class="error-message">Enter your city please</span>
             </div>
             <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="text" class="form-control phone_number" 
+                <label for="phone_number">Phone</label>
+                <input type="text" class="form-control phone_number" id="phone_number"
                     placeholder="Enter your phone +380...">
-                    <span class="error-message">Введите номер вашего телефона </span>
+                    <span class="error-message">Enter your phone number please</span>
             </div>
             <div class="form-group">
                 <label for="mail">Email</label>
                 <input type="text" class="form-control mail" 
-                    placeholder="Enter Email">
-                    <span class="error-message">Введите ваш email</span>
+                    placeholder="Enter Email" id="mail">
+                    <span class="error-message">Enter your email please </span>
             </div>
             <div class="btn-wrap d-flex justify-content-between align-items-center">
                 <button class="btn btn-primary btn-prev">Prev Level</button>
@@ -97,6 +99,8 @@
         <h2>Thank You Message</h2>
     </div>
     </form>
+</div>
+   
    
 
 
