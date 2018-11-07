@@ -15,10 +15,10 @@
         },
         "Opel":{
             "models":{
-                "CORSA-OPC":{
+                "CORSA":{
                     "years": [2007]
                 },
-                "GRANDLAND X":{
+                "GRANDLAND":{
                     "years": [2008, 2010]
                 },
                 "OMEGA": {
