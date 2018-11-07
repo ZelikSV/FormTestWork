@@ -1,0 +1,93 @@
+@import 'reset.scss';
+
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+.form-send{
+    position: relative;
+    width: 70%;
+    height: 550px;
+    margin: 40px auto;
+}
+.form-group{
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+}
+.form-group.error {
+    .form-control{
+    border: 1px solid #ff0000;
+}
+.error-message{
+    font-size: 15px;
+    opacity: 1;
+}
+}
+
+.form-control{
+    transition: .3s linear;
+}
+
+.error-message{
+    color: #ff0000;
+    font-size: 0px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    opacity: 0;
+    transition: .3s linear;
+}
+.blocks-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .4s linear;
+}
+.blocks-info.active{
+    opacity: 1;
+    z-index: 9;
+}
+.thanks-window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+    padding: 100px 50px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    z-index: 0;
+    transition: .3s linear;
+}
+.thanks-window.show{
+    opacity: 1;
+    z-index: 999;
+}
+.btn-wrap{
+    width: 40%;
+}
+.btn-next{
+    transform: scale(1);
+    opacity: 1;
+    transition: .3s linear;
+}
+.btn-next.hidden{
+    transform: scale(0);
+    opacity: 0;
+}
+
+.close-modal{
+    color: #000;
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+}
